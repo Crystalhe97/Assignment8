@@ -90,16 +90,16 @@ class TestGameWinner(unittest.TestCase):
         board = Board()
 
         board.board = ['X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' ']
-        self.assertTrue(board.check_winner('X'))
+        self.assertTrue(board.check_winner('X')) # Check playerX is the winner
 
         board.board = ['O', 'O', 'O', ' ', ' ', ' ', ' ', ' ', ' ']
-        self.assertTrue(board.check_winner('O'))
+        self.assertTrue(board.check_winner('O')) # Check playerO is the winner
 
         board.board = ['X', ' ', ' ', ' ', 'X', ' ', ' ', ' ', 'X']
         self.assertTrue(board.check_winner('X'))
 
         board.board = ['X', 'O', 'X', 'O', 'O', 'X', 'X', 'X', 'O']
-        self.assertFalse(board.check_winner('X'))
+        self.assertFalse(board.check_winner('X')) # Check draw
 
 if __name__ == '__main__':
     unittest.main()
