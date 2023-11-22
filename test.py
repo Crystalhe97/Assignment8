@@ -78,18 +78,18 @@ class TestValidMoves(unittest.TestCase):
 class TestGameWinner(unittest.TestCase):
     def test_check_winner(self):
         board = Board()
+
         board.board = ['X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' ']
-        self.assertTrue(board.check_winner('X'))  
+        self.assertTrue(board.check_winner('X'))
 
         board.board = ['O', 'O', ' ', ' ', ' ', ' ', ' ', ' ', 'O']
-        self.assertTrue(board.check_winner('O'))  
+        self.assertTrue(board.check_winner('O'))
 
         board.board = ['X', ' ', ' ', ' ', 'X', ' ', ' ', ' ', 'X']
-        self.assertTrue(board.check_winner('X')) 
+        self.assertTrue(board.check_winner('X'))
 
         board.board = ['X', 'O', 'X', 'O', 'O', 'X', 'X', 'X', 'O']
         self.assertFalse(board.check_winner('X'))
 
 if __name__ == '__main__':
     unittest.main()
-
