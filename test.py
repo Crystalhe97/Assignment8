@@ -82,7 +82,7 @@ class TestGameWinner(unittest.TestCase):
         board.board = ['X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' ']
         self.assertTrue(board.check_winner('X'))
 
-        board.board = ['O', 'O', ' ', ' ', ' ', ' ', ' ', ' ', 'O']
+        board.board = ['O', 'O', 'O', ' ', ' ', ' ', ' ', ' ', ' ']
         self.assertTrue(board.check_winner('O'))
 
         board.board = ['X', ' ', ' ', ' ', 'X', ' ', ' ', ' ', 'X']
